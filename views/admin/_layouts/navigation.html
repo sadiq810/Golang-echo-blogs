@@ -1,0 +1,64 @@
+{{define "Navigation"}}
+<aside class="app-sidebar doc-sidebar">
+    <div class="app-sidebar__user clearfix">
+        <div class="dropdown user-pro-body">
+            <div>
+                <img src="/public/images/user.png" alt="user-img" class="avatar avatar-lg brround">
+                <a href="/admin/edit-profile" class="profile-img">
+                    <span class="fa fa-pencil" aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="user-info">
+                <h2>{{.User.Name}}</h2>
+            </div>
+        </div>
+    </div>
+    <ul class="side-menu">
+        <li>
+            <a class="side-menu__item" href="/admin/dashboard">
+                <i class="side-menu__icon fa fa-tachometer"></i>
+                <span class="side-menu__label">Dashboard</span>
+            </a>
+        </li>
+
+        <li>
+            <a class="side-menu__item" href="/admin/users">
+                <i class="side-menu__icon fa fa-users"></i>
+                <span class="side-menu__label">Manage Users</span>
+            </a>
+        </li>
+
+        <li>
+            <a class="side-menu__item" href="/admin/categories">
+                <i class="side-menu__icon fa fa-cogs"></i>
+                <span class="side-menu__label">Manage Categories</span>
+            </a>
+        </li>
+
+        <li>
+            <a class="side-menu__item" href="/admin/blogs">
+                <i class="side-menu__icon fa fa-list"></i>
+                <span class="side-menu__label">Manage Blogs</span>
+            </a>
+        </li>
+    </ul>
+
+    <div class="app-sidebar-footer">
+        <a href="/admin/blogs" title="Manage Blogs">
+            <span class="fa fa-list" aria-hidden="true"></span>
+        </a>
+        <a href="/admin/users" title="Manage Users">
+            <span class="fa fa-users" aria-hidden="true"></span>
+        </a>
+        <a href="/admin/edit-profile" title="Edit Profile">
+            <span class="fa fa-cog" aria-hidden="true"></span>
+        </a>
+        <a href="/admin/dashboard" title="Dashboard">
+            <span class="fa fa-dashboard" aria-hidden="true"></span>
+        </a>
+        <a href="/admin/logout" title="Logout">
+            <span class="fa fa-sign-in" aria-hidden="true"></span>
+        </a>
+    </div>
+</aside>
+{{end}}

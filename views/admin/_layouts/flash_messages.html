@@ -1,0 +1,13 @@
+{{ define "FlashMessages" }}
+    {{ if .errorMessage }}
+    <div class="alert alert-danger">
+        Error! {{.errorMessage}}
+    </div>
+    {{ end }}
+
+    {{ if .successMessage }}
+    <div class="alert alert-success">
+        Error! {{.successMessage}}
+    </div>
+    {{ end }}
+{{ end }}

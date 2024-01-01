@@ -1,0 +1,51 @@
+{{template "header" .}}
+
+<div class="side-app">
+    <div class="page-header">
+        <h4 class="page-title">Edit - {{.data.Name}}</h4>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/admin/dashboard">Dashboard</a></li>
+            <li class="breadcrumb-item"><a href="/admin/users">Users</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Edit</li>
+        </ol>
+
+    </div>
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="card m-b-20">
+                <div class="card-header">
+                    <h3 class="card-title">Edit User</h3>
+                </div>
+
+                {{ template "FlashMessages" .}}
+
+                <div class="card-body">
+                    <form method="post" action="/admin/users/{{.data.ID}}/update">
+                        <div class="form-group">
+                            <label class="form-label" for="name">Name</label>
+                            <input type="text" name="name" value="{{.data.Name}}" class="form-control" id="name"  placeholder="Enter Name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email</label>
+                            <input type="email" name="email" value="{{.data.Email}}" class="form-control" id="email"  placeholder="Enter Email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="password">Password</label>
+                            <input type="password" name="password" class="form-control" min="5" id="password"  placeholder="Enter Password">
+                        </div>
+
+                        <div class="form-group mb-0">
+                            <div class="checkbox checkbox-secondary">
+                                <button type="submit" class="btn btn-primary ">Save</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{template "footer" .}}

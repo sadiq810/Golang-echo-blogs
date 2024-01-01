@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <h2>This is home of the blogs site. {{.name}}</h2>
+    <ul>
+        {{ range $c := .categories }}
+        <li>{{$c.Title}}</li>
+        {{ end }}
+    </ul>
+
+    <img src="/public/image.jpg" alt="" style="width: 250px; height: 150px;">
+</div>
+</body>
+</html>

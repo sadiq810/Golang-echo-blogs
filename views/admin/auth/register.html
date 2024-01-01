@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+{{template "Head" .}}
+
+<body class="construction-image">
+<!--Page-->
+<div class="page ">
+    <div class="page-content z-index-10">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-md-12 col-md-12 d-block mx-auto">
+                    <div class="card mb-xl-0">
+                        <div class="card-header">
+                            <h3 class="card-title">Register</h3>
+                        </div>
+
+                        {{ template "FlashMessages" .}}
+
+                        <div class="card-body">
+                            <form action="/admin/register" method="POST">
+                                <div class="form-group">
+                                    <label class="form-label text-dark">Name</label>
+                                    <input type="text" name="name" required class="form-control" placeholder="Enter name">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label text-dark">Email address</label>
+                                    <input type="email" name="email" required class="form-control" placeholder="Enter email">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label text-dark">Password</label>
+                                    <input type="password" name="password" required class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                </div>
+
+                                <div class="form-footer mt-2">
+                                    <button type="submit" class="btn btn-primary btn-block">Create New Account</button>
+                                </div>
+                                <div class="text-center  mt-3 text-dark">
+                                    Already have account?<a href="/admin/login">SignIn</a>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{template "Scripts" .}}
+
+</body>
+</html>

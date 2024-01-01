@@ -1,0 +1,60 @@
+{{template "header" .}}
+    <div class="side-app">
+        <div class="page-header">
+            <h4 class="page-title">Dashboard</h4>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+            </ol>
+        </div>
+
+        <div class="row row-cards">
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                <div class="card">
+                    <div class="card-body text-center feature">
+                        <div class="fa-stack fa-lg fa-1x icons shadow-default bg-primary-transparent">
+                            <i class="icon icon-people text-primary"></i>
+                        </div>
+                        <p class="card-text mt-3 mb-3">Total Users</p>
+                        <p class="h2 text-center text-primary">{{ .data.total_users }}</p>
+                    </div>
+                </div>
+            </div><!-- COL END -->
+
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                <div class="card">
+                    <div class="card-body text-center feature">
+                        <div class="fa-stack fa-lg fa-1x icons shadow-default bg-secondary-transparent">
+                            <i class="icon icon-refresh text-secondary"></i>
+                        </div>
+                        <p class="card-text mt-3 mb-3">Total Categories</p>
+                        <p class="h2 text-center text-secondary">{{ .data.total_categories }}</p>
+                    </div>
+                </div>
+            </div><!-- COL END -->
+
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                <div class="card">
+                    <div class="card-body text-center feature ">
+                        <div class="fa-stack fa-lg fa-1x icons shadow-default bg-info-transparent">
+                            <i class="icon icon-speech text-info"></i>
+                        </div>
+                        <p class="card-text mt-3 mb-3">Total Views</p>
+                        <p class="h2 text-center text-success-1">{{ .data.total_blog_views }}</p>
+                    </div>
+                </div>
+            </div><!-- COL END -->
+
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                <div class="card">
+                    <div class="card-body text-center feature">
+                        <div class="fa-stack fa-lg icons shadow-default bg-warning-transparent">
+                            <i class="icon icon-rocket text-warning"></i>
+                        </div>
+                        <p class="card-text mt-3 mb-3">Total Posts</p>
+                        <p class="h2 text-center text-secondary-1">{{ .data.total_blogs }}</p>
+                    </div>
+                </div>
+            </div><!-- COL END -->
+        </div>
+    </div>
+{{template "footer" .}}
